@@ -77,6 +77,33 @@ Tab:CreateButton({
    end,
 })
 
+-- Infinite Yield Button (Placed between Fly GUI and the FPS Counter)
+Tab:CreateButton({
+   Name = "Infinite Yield",
+   Callback = function()
+      local success, err = pcall(function()
+          loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+      end)
+      
+      if success then
+          Rayfield:Notify({
+             Title = "Infinite Yield",
+             Content = "Executing Infinite Yield...",
+             Duration = 3,
+             Image = 4483362458,
+          })
+      else
+          warn("Infinite Yield Failed to load: " .. tostring(err))
+          Rayfield:Notify({
+             Title = "Error",
+             Content = "Infinite Yield failed. Check F9 console.",
+             Duration = 5,
+             Image = 4483362458,
+          })
+      end
+   end,
+})
+
 -- Creates a Text Box (Label) box directly under the buttons with NO icon (nil)
 local FpsLabel = Tab:CreateLabel("FPS: Calculating...", nil, Color3.fromRGB(255, 255, 255), false)
 
@@ -152,12 +179,44 @@ NdsTab:CreateButton({
 })
 
 
+-- ==================== BROOKHAVEN TAB ====================
+local BrookhavenTab = Window:CreateTab("Brookhaven", 4483362458)
+
+-- dark hub Loadstring Button
+BrookhavenTab:CreateButton({
+   Name = "dark hub",
+   Callback = function()
+      local success, err = pcall(function()
+          -- Preloaded with an active, functional version of the Dark Hub script
+          loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Dark-Hub-214104"))()
+      end)
+      
+      if success then
+          Rayfield:Notify({
+             Title = "dark hub",
+             Content = "Executing dark hub...",
+             Duration = 3,
+             Image = 4483362458,
+          })
+      else
+          warn("dark hub Failed to load: " .. tostring(err))
+          Rayfield:Notify({
+             Title = "Error",
+             Content = "dark hub failed. Check F9 console.",
+             Duration = 5,
+             Image = 4483362458,
+          })
+      end
+   end,
+})
+
+
 -- ==================== UNIVERSAL TAB ====================
 local UniversalTab = Window:CreateTab("Universal", 4483362458)
 
 -- egor Loadstring Button
 UniversalTab:CreateButton({
-   Name = "egor",
+   Name = "Roblox Egor",
    Callback = function()
       local success, err = pcall(function()
           loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FE-Egor-script-can-customize-48846"))()
