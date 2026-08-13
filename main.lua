@@ -211,6 +211,36 @@ BrookhavenTab:CreateButton({
 })
 
 
+-- ==================== RDITE TAB ====================
+local RditeTab = Window:CreateTab("Rdite", 4483362458)
+
+RditeTab:CreateButton({
+   Name = "Rdite Gui",
+   Callback = function()
+      local success, err = pcall(function()
+          loadstring(game:HttpGet("https://rawscripts.net/raw/Cart-Ride-Into-Rdite!-Game-Script-8281"))()
+      end)
+      
+      if success then
+          Rayfield:Notify({
+             Title = "Rdite Gui",
+             Content = "Executing Rdite Gui...",
+             Duration = 3,
+             Image = 4483362458,
+          })
+      else
+          warn("Rdite Gui Failed to load: " .. tostring(err))
+          Rayfield:Notify({
+             Title = "Error",
+             Content = "Rdite Gui failed. Check F9 console.",
+             Duration = 5,
+             Image = 4483362458,
+          })
+      end
+   end,
+})
+
+
 -- ==================== UNIVERSAL TAB ====================
 local UniversalTab = Window:CreateTab("Universal", 4483362458)
 
