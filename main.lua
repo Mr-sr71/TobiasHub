@@ -387,7 +387,7 @@ UniversalTab:CreateButton({
 
 -- Invincible Button
 UniversalTab:CreateButton({
-   Name = "Invincible v1",
+   Name = "Invincible characters gui v1",
    Callback = function()
       local success, err = pcall(function()
           loadstring(game:HttpGet("https://raw.githubusercontent.com/giobolqv1/invincible-characters-animations-by-GioBolqv1-/refs/heads/main/universal.lua"))()
@@ -395,7 +395,7 @@ UniversalTab:CreateButton({
       
       if success then
           Rayfield:Notify({
-             Title = "Invincible by GioBolqv1",
+             Title = "Invincible chars by GioBolqv1",
              Content = "Executing script...",
              Duration = 3,
              Image = 4483362458,
