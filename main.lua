@@ -241,6 +241,37 @@ RditeTab:CreateButton({
 })
 
 
+-- ==================== WORK AT A PIZZA PLACE ====================
+local CustomTab = Window:CreateTab("WORK AT A PIZZA PLACE", 4483362458)
+
+-- PIZZA PLACE GUI
+CustomTab:CreateButton({
+   Name = "Pizza Place GUI",
+   Callback = function()
+      local success, err = pcall(function()
+          loadstring(game:HttpGet(('https://raw.githubusercontent.com/Hm5011/hussain/refs/heads/main/Work%20at%20a%20pizza%20place'),true))()
+      end)
+      
+      if success then
+          Rayfield:Notify({
+             Title = "Pizza Place GUI",
+             Content = "Executing script...",
+             Duration = 3,
+             Image = 4483362458,
+          })
+      else
+          warn("Script Failed to load: " .. tostring(err))
+          Rayfield:Notify({
+             Title = "Error",
+             Content = "Script failed to load. Check F9 console.",
+             Duration = 5,
+             Image = 4483362458,
+          })
+      end
+   end,
+})
+
+
 -- ==================== UNIVERSAL TAB ====================
 local UniversalTab = Window:CreateTab("Universal", 4483362458)
 
