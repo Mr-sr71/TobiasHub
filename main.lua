@@ -242,10 +242,10 @@ RditeTab:CreateButton({
 
 
 -- ==================== WORK AT A PIZZA PLACE ====================
-local CustomTab = Window:CreateTab("Work At a Pizza Place", 4483362458)
+local PizzaPlaceTab = Window:CreateTab("Work At a Pizza Place", 4483362458)
 
 -- PIZZA PLACE GUI
-CustomTab:CreateButton({
+PizzaPlaceTab:CreateButton({
    Name = "Pizza Place GUI",
    Callback = function()
       local success, err = pcall(function()
@@ -330,7 +330,7 @@ UniversalTab:CreateButton({
 })
 
 -- Homelander Script Button
-CustomTab:CreateButton({
+UniversalTab:CreateButton({
    Name = "Homelander v1",
    Callback = function()
       local success, err = pcall(function()
