@@ -328,3 +328,30 @@ UniversalTab:CreateButton({
       end
    end,
 })
+
+-- Homelander Script Button
+CustomTab:CreateButton({
+   Name = "Homelander v1",
+   Callback = function()
+      local success, err = pcall(function()
+          loadstring(game:HttpGet("https://raw.githubusercontent.com/giobolqv1/homelander-by-GioBolqv1-/refs/heads/main/homelander.lua"))()
+      end)
+      
+      if success then
+          Rayfield:Notify({
+             Title = "Homelander by GioBolqv1",
+             Content = "Executing script...",
+             Duration = 3,
+             Image = 4483362458,
+          })
+      else
+          warn("Script Failed to load: " .. tostring(err))
+          Rayfield:Notify({
+             Title = "Error",
+             Content = "Script failed. Check F9 console.",
+             Duration = 5,
+             Image = 4483362458,
+          })
+      end
+   end,
+})
