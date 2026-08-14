@@ -355,3 +355,57 @@ UniversalTab:CreateButton({
       end
    end,
 })
+
+-- A-Train Button
+UniversalTab:CreateButton({
+   Name = "A-Train v1",
+   Callback = function()
+      local success, err = pcall(function()
+          loadstring(game:HttpGet"https://raw.githubusercontent.com/giobolqv1/A-Train-by-GioBolqv1-/refs/heads/main/train.lua"))()
+      end)
+      
+      if success then
+          Rayfield:Notify({
+             Title = "A-Train by GioBolqv1",
+             Content = "Executing script...",
+             Duration = 3,
+             Image = 4483362458,
+          })
+      else
+          warn("Script Failed to load: " .. tostring(err))
+          Rayfield:Notify({
+             Title = "Error",
+             Content = "Script failed. Check F9 console.",
+             Duration = 5,
+             Image = 4483362458,
+          })
+      end
+   end,
+})
+
+-- Invincible Button
+UniversalTab:CreateButton({
+   Name = "Invincible v1",
+   Callback = function()
+      local success, err = pcall(function()
+          loadstring(game:HttpGet("https://raw.githubusercontent.com/giobolqv1/invincible-characters-animations-by-GioBolqv1-/refs/heads/main/universal.lua"))()
+      end)
+      
+      if success then
+          Rayfield:Notify({
+             Title = "Invincible by GioBolqv1",
+             Content = "Executing script...",
+             Duration = 3,
+             Image = 4483362458,
+          })
+      else
+          warn("Script Failed to load: " .. tostring(err))
+          Rayfield:Notify({
+             Title = "Error",
+             Content = "Script failed. Check F9 console.",
+             Duration = 5,
+             Image = 4483362458,
+          })
+      end
+   end,
+})
