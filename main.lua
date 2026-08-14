@@ -14,8 +14,19 @@ local Window = Rayfield:CreateWindow({
    Name = "Tobias Hub",
    LoadingTitle = "Loading Menu...",
    LoadingSubtitle = "by Tobiastheeighth",
-   ConfigurationSaving = { Enabled = false }
+   ConfigurationSaving = {
+      Enabled = false,
+      FolderName = "TobiasHubConfigs", -- Must be provided even if disabled
+      FileName = "MainConfig"          -- Must be provided even if disabled
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "", 
+      RememberJoins = false
+   },
+   KeySystem = false -- Explicitly turn off the key system to prevent loading hangs
 })
+
 
 -- ==================== MISC TAB ====================
 local Tab = Window:CreateTab("Misc", 4483362458)
