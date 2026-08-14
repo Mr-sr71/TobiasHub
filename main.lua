@@ -1,30 +1,21 @@
--- Safe window destruction handler
-if getgenv().TobiasHubExecuted and _G.Rayfield then 
-    pcall(function() _G.Rayfield:Destroy() end)
+-- Destroy any previous menu instance to prevent overlapping bugs
+if getgenv().TobiasHubExecuted then 
+    pcall(function() Rayfield:Destroy() end)
 end
 getgenv().TobiasHubExecuted = true
 
--- Fetching the UI Library cleanly
+-- Bypassing the link cutoff bug by gluing the pieces together
 local linkPart1 = "https://sirius.menu"
 local linkPart2 = "/rayfield"
 local Rayfield = loadstring(game:HttpGet(linkPart1 .. linkPart2))()
-_G.Rayfield = Rayfield -- Store globally for future cleanups
 
 local Window = Rayfield:CreateWindow({
    Name = "Tobias Hub",
    LoadingTitle = "Loading Menu...",
    LoadingSubtitle = "by Tobiastheeighth",
    ConfigurationSaving = {
-      Enabled = false,
-      FolderName = "TobiasHubConfigs", -- Must be provided even if disabled
-      FileName = "MainConfig"          -- Must be provided even if disabled
-   },
-   Discord = {
-      Enabled = false,
-      Invite = "", 
-      RememberJoins = false
-   },
-   KeySystem = false -- Explicitly turn off the key system to prevent loading hangs
+      Enabled = false
+   }
 })
 
 
