@@ -1,21 +1,20 @@
--- Destroy any previous menu instance to prevent overlapping bugs
-if getgenv().TobiasHubExecuted then 
-    pcall(function() Rayfield:Destroy() end)
+-- Safe window destruction handler
+if getgenv().TobiasHubExecuted and _G.Rayfield then 
+    pcall(function() _G.Rayfield:Destroy() end)
 end
 getgenv().TobiasHubExecuted = true
 
--- Bypassing the link cutoff bug by gluing the pieces together
+-- Fetching the UI Library cleanly
 local linkPart1 = "https://sirius.menu"
 local linkPart2 = "/rayfield"
 local Rayfield = loadstring(game:HttpGet(linkPart1 .. linkPart2))()
+_G.Rayfield = Rayfield -- Store globally for future cleanups
 
 local Window = Rayfield:CreateWindow({
    Name = "Tobias Hub",
    LoadingTitle = "Loading Menu...",
    LoadingSubtitle = "by Tobiastheeighth",
-   ConfigurationSaving = {
-      Enabled = false
-   }
+   ConfigurationSaving = { Enabled = false }
 })
 
 -- ==================== MISC TAB ====================
