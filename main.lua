@@ -361,7 +361,8 @@ UniversalTab:CreateButton({
    Name = "A-Train v1",
    Callback = function()
       local success, err = pcall(function()
-          loadstring(game:HttpGet"https://raw.githubusercontent.com/giobolqv1/A-Train-by-GioBolqv1-/refs/heads/main/train.lua"))()
+          -- FIXED: Added the missing "(" here
+          loadstring(game:HttpGet("https://raw.githubusercontent.com/giobolqv1/A-Train-by-GioBolqv1-/refs/heads/main/train.lua"))()
       end)
       
       if success then
@@ -408,4 +409,6 @@ UniversalTab:CreateButton({
           })
       end
    end,
+})
+
 })
