@@ -6,3 +6,4 @@
 -- Youtube channels are: @Tobiastheeighth and @DonnellandJasperRBLX
 -- ==========================================
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Mr-sr71/TobiasHub/refs/heads/main/main.lua"))()
