@@ -1,1 +1,1 @@
-This is the official Tobias Hub by @Tobiastheeighth my code is obfuscated so no one steals and the script is on scriptblox and rscripts under the user of Tobias_Scripts
+This is the official Tobias Hub by @Tobiastheeighth my code is obfuscated so no one steals and the script is on rscripts under the user of Tobias_Scripts and on youtube under @Tobiastheeighth and @DonnellandJasperRBLX
